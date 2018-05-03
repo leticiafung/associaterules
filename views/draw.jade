@@ -1,0 +1,31 @@
+﻿doctype html
+html(lang="en")
+  head
+    meta(charset='utf-8')
+    title 算法结果
+    link(href="D:/study/codepractice/dailyPra/associaterule/styles/drawstyle.css",rel="stylesheet")
+  body
+    header
+      h1 关联规则挖掘
+    nav
+      ul.list1
+        li 
+          a(href="index.html") 主页
+        li 
+          a(href="drawpic.html") 算法运行
+    #functionbox
+      #ruleDisplay
+          //-var items = [{a:"跟高金，want代课教师方式来，是的罚款"},{b:"跟高金，want代课教师方式来，是的罚款"}]
+          mixin showItem(item1)
+            .singleRule
+              p.ruleItem #{item1}
+              button 显示运行图
+          each item in items
+            each value in item
+              +showItem(value)
+     #svgplace
+  
+    
+
+
+      

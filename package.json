@@ -1,0 +1,24 @@
+{
+  "name": "associaterule",
+  "version": "1.0.0",
+  "description": "web for associaterules",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leticiafung/associaterules.git"
+  },
+  "author": "Leticia Fung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leticiafung/associaterules/issues"
+  },
+  "homepage": "https://github.com/leticiafung/associaterules#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "iconv-lite": "^0.4.21",
+    "jade": "^1.11.0"
+  }
+}

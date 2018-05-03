@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='utf-8')
+    title 告警数据
+    link(href="styles/drawstyle.css",rel="stylesheet")
+  body
+    header
+      h1 关联规则挖掘
+    nav
+      ul.list1
+        li 
+          a(href="index.html") 主页
+        li 
+          a(href="drawpic.html") 告警数据
+    #functionbox
+      table#ruleDispaly(border)
+        thead
+          tr
+          each value,key in items[0]
+            th #{key}
+        each item in items
+          tr
+            each value in item
+              td #{value}
+    #button 分析关联规则
+
+
+        
+      

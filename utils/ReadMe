@@ -1,0 +1,133 @@
+工程说明：
+
+工程基于idea。
+
+运行时的主函数为 main 包下的 Main 类。
+
+目前还不支持web界面，只能将两个算法的结果输出为 excel 文件。
+
+注意在运行前把 parameters.json 中的参数填写正确，其中主要需要填写的字段在下方解释中以带*号的参数字段表示。
+
+关于参数填写的说明可以参考一下 helper 文件。
+
+/***********************************************************/
+
+
+关于整个工程的说明：
+
+版本：2.0
+
+这是一个idea下的java工程。
+
+加入了版本控制（可以不管）：git，
+    idea下可能需要在 File -> setting -> version control -> git 下配置一下 git 的路径。
+
+使用的第三方jar包：
+
+    dom4j : 解析XML文件
+    javacsv : 解析csv文件
+    json : 解析json文件
+    log4j : 进行日志记录
+    mysql : 链接mysql数据库
+    poi : 解析excel文件
+
+主要的包：
+
+    alarm: 告警类相关的包
+
+    algorithm: 算法相关
+
+    dataOperation: 数据操作相关
+
+    ioUtils: io相关工具类
+
+    log: 日志相关
+
+    main: 主要运行入口
+
+    out: 文件输出相关
+
+    parameter: 参数相关
+
+    test: 测试使用
+
+项目文件夹：
+
+    .idea : idea这个ide自己的配置文件
+    lib ： 第三方包
+    logs ： 这就是日志记录之后存放的地方
+    out ： idea生成的项目的 .class 文件等
+    src : 代码文件
+ $  helper : 填写参数的一些帮助说明
+ $  parameters.json : 这就是参数配置文件
+    read_files.iml : idea 自带的工程文件
+ $  ReadMe ： 本文件，对程序的各个部分进行说明
+
+具体的函数说明可以看类中的注释。
+
+
+
+/************************************************************************************/
+
+
+下面是json文件中的参数说明（json文件不能写注释）：
+
+带 * 的表示用户一定需要在运行之前填写修改的参数，（暂时不包括算法的参数），剩下的参数一般不需要修改
+
+{
+
+  "path" : {
+    "src_path" : "F:\\project_local\\data\\2018-03-01-arrange\\total_usn",    // 输入告警数据所在的文件夹 *
+    "res_path" : "F:\\project_local\\res"                                     // 输出结果文件的输出路径   *
+  },
+
+  "sql" : {			// 数据库、数据表相关参数
+    "url" : "jdbc:mysql://localhost:3306",  // 数据库驱动	      *
+    "user" : "root",						// 数据库用户名     *
+    "password" : "123",						// 数据库连接密码   *
+    "database" : "alarm",			        // 数据库名字
+    "table" : "total",                      // 原始文件写入数据库中的表名
+    "table_after_process" : "total_clear",  // 算法执行中的临时数据表
+
+    "new_data_fmt" : "yyyy-MM-dd HH:mm:ss",		// 代码转化后日期格式
+    "old_data_fmt" : "yyyy-MM-dd HH:mm:ssXXX",	// 告警文件中的日期格式    *
+
+    "alarm_id" : "AlarmId",						// 输入告警文件中 AlarmId 字段所对应的字段名   *
+    "alarm_raised_time" : "AlarmRaisedTime",	// 同上                                     *
+    "alarm_cleared_time" : "AlarmClearedTime",	// 同上                                     *
+    "alarm_name" : "AlarmName",					// 同上                                     *
+
+    "alarm_id_table" : "AlarmId",						// 建立的数据表中的 AlarmId 的字段名
+    "alarm_raised_time_table" : "AlarmRaisedTime",		// 同上
+    "alarm_cleared_time_table" : "AlarmClearedTime",	// 同上
+    "alarm_name_table" : "AlarmName",					// 同上
+
+    "alarm_id_sql" : "VARCHAR(30)",         // 数据表建立相关
+    "alarm_raised_time_sql" : "DATETIME",
+    "alarm_cleared_time_sql" : "DATETIME",
+    "alarm_name_sql" : "VARCHAR(100)"
+  },
+
+  "data_process" : {				// 数据预处理相关参数
+    "block_size" : 10000,			// 每次读取告警数
+
+    "statistics_on" : true,			// 是否统计基本信息
+
+    "flash_on" : true,				// 是否去除闪断告警
+    "flash_threshold" : 10,			// 闪断告警时长定义
+    "merge_time_threshold" : 30,	// 闪断告警合并时长门限
+    "merge_count_threshold" : 3		// 闪断告警合并条数门限
+  },
+
+  "correlation_algorithm" : {		// 相关系数算法相关参数
+    "corr_threshold" : 0.7			// 相关系数门限
+  },
+
+  "association_rules" : {			// 关联规则算法相关参数
+    "win_width" : 60,				// 时间窗长度
+    "move_len" : 20,				// 时间窗滑动步长
+    "support" : 10,					// 告警支持度门限
+    "conf" : 0.7,					// 规则置信度门限
+    "k" : 2							// 挖掘规则长度
+  }
+}
