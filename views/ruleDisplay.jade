@@ -23,7 +23,9 @@ html(lang="en")
           tr
             each value in item
               td #{value}
-    #button 分析关联规则
+    button#showgraph(type="button") 分析关联规则
+
+    script(type="text/javascript",src='../scripts/ruleDisplay.js')
 
 
         

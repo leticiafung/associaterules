@@ -46,6 +46,17 @@ function getFilename(str,bound) {
   return filenameline.split(';')[2].split('=')[1];
 
 }
+//---------以上是处理文件和参数表单--------
+//-----------以下处理表单------
+//http request has body or not
+var hasbody = function(req) {
+  return 'transfer-encoding' in req.headers || 'content-length' in req.headers;
+}
+
+
+
+
+
 
 module.exports.getUploadValue = getUploadValue;
 module.exports.getContenttype = getContenttype;
