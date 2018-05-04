@@ -7,6 +7,9 @@ window.onload = function() {
     uplist.addEventListener("click",foldunfold,false);
     highlightP();
 
+    var form = document.getElementById("upload");
+    form.addEventListener("submit", formSubmit, false);
+
 
 
 };
@@ -40,6 +43,17 @@ function highlightP() {
         }
 }
 
+function formSubmit(event) {
+    event.preventDefault();
+    var form = document.getElementById("upload");
+    
+    var uploadfilepath = document.getElementById("doc1");
+    console.log(uploadfilepath.value);//the file path
+    
+    form.elements["filepath"].value = uploadfilepath.value;
+   // alert(uploadfilepath.files.length);
+    form.submit();
+}
 
 //http.request()
 
