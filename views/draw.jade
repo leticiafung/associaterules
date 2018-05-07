@@ -3,7 +3,7 @@ html(lang="en")
   head
     meta(charset='utf-8')
     title 算法结果
-    link(href="D:/study/codepractice/dailyPra/associaterule/styles/drawstyle.css",rel="stylesheet")
+    link(href="../styles/drawstyle.css",rel="stylesheet")
   body
     header
       h1 关联规则挖掘
@@ -18,14 +18,13 @@ html(lang="en")
           //-var items = [{a:"跟高金，want代课教师方式来，是的罚款"},{b:"跟高金，want代课教师方式来，是的罚款"}]
           mixin showItem(item1)
             .singleRule
-              p.ruleItem #{item1}
+              p.ruleItem #{JSON.stringify(item1)}
               button 显示运行图
           each item in items
             each value in item
               +showItem(value)
-     #svgplace
-  
-    
-
-
-      
+      #svgplace
+    p#hiddenv #{JSON.stringify(drawdata)}
+     //使用后台传的数据
+    script(src="http://d3js.org/d3.v3.min.js")
+    script(src="../scripts/drawpage.js",type="text/javascript")    

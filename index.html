@@ -20,19 +20,22 @@
     <form action="/answer" method="post" id="upload">
         <div id="requiredRow">
             <div>
-            <label for="doc1">告警数据文件<input type="file" placeholder="D://" id="doc1" required multiple autofocus /></label>           
-            <label>文件输出路径<input type="text" placeholder="文件输出路径" id="doc2" name="outpath" required/></label>
+            <label for="doc1">告警数据文件<input type="text" placeholder="D://" id="doc1" required autofocus name="src_path"/></label>           
+            <label>文件输出路径<input type="text" placeholder="文件输出路径" id="doc2" name="res_path" required/></label>
             </div>
             <div>
-            <label>告警文件日期格式<input type="text" placeholder="MM/dd/yyy" name="outpath" required/></label>
-            <label>告警源字段<input type="text" placeholder="告警源" name="outpath" required/></label>
-            <label>告警ID字段 <input type="text" placeholder="告警ID" required/></label>
+            <label>临时数据表 <input style="text" name="table_name" value="alarm_data" /></label>
+            <label>告警文件日期格式<input type="text" placeholder="MM/dd/yyy" name="file_data_fmt" required/></label>
+            <label>数据表日期格式<input type="text" placeholder="日期格式"  name="table_data_fmt" value="yyyy-MM-dd HH:mm:ss" /></label>
+            <label>告警源字段<input type="text" placeholder="告警源" name="alarm_src_file" required/></label>
+            <label>告警ID字段 <input type="text" placeholder="告警ID" name="alarm_id_file" required/></label>
             </div>
             <div>
-            <label>告警名称字段 <input type="text" placeholder="名称" required/></label>
-            <label>发生时间(NT)字段 <input type="text" placeholder="发生时间" required/></label>
+            <label>告警名称字段 <input type="text" placeholder="名称" name="alarm_name_file" required/></label>
+            <label>发生时间(NT)字段 <input type="text" placeholder="发生时间" name="alarm_raised_time_file" required/></label>
+            <label>清除时间(NT)字段 <input type="text" placeholder="发生时间" name="alarm_cleared_time_file" required/></label>
             </div>
-            <input type="hidden" name="filepath" value="">
+            <!-- <input type="hidden" name="filepath" value=""> -->
         </div>
 
 
@@ -41,38 +44,41 @@
                 <p> <img  id ="ficon" src="images/unshow.png" alt="unshow" />  高级选项  </p>
             </div>
             <div id="row42">
-                <label>临时数据表 <input style="text" placeholder="临时数据表" /></label>
+               
                 <br />
-                <label>数据表日期格式<input style="text" placeholder="日期格式"/></label>
+               
                 <br />
-                <label>数据表告警源字段名<input style="text" placeholder="告警源字段名"/></label>
-                <label>数据表告警ID字段名<input style="text" placeholder="告警源ID字段名"/></label>
-                <label>数据表告警名称字段名<input style="text" placeholder="告警名称字段名"/></label>
-                <label>数据表告警发生时间字段名<input style="text" placeholder="告警发生时间字段名"/></label>
-                <label>数据表告警清除时间字段名<input style="text" placeholder="告警清除字段名"/></label>
-                <label>数据表src建立相关<input style="text" placeholder="src相关"/></label>
-                <label>数据表id建立相关<input style="text" placeholder="id相关"/></label>
-                <label>数据表name建立相关<input style="text" placeholder="name相关"/></label>
-                <label>数据表发生时间建立相关<input style="text" placeholder="数据表发生时间建立相关"/></label>
-                <label>数据表清除时间建立相关<input style="text" placeholder="数据表清除时间建立相关"/></label>
+                <label>数据表告警源字段名<input tyle="text" placeholder="告警源字段名" name="alarm_src_table" value="alarm_src"/></label>
+                <label>数据表告警ID字段名<input tyle="text" placeholder="告警源ID字段名" name="alarm_id_table" value= "AlarmId"/></label>
+                <label>数据表告警名称字段名<input tyle="text" placeholder="告警名称字段名" name="alarm_name_table" value= "AlarmName"/></label>
+                <label>数据表告警发生时间字段名<input tyle="text" placeholder="告警发生时间字段名" name= "alarm_raised_time_table" value="AlarmRaisedTime"/></label>
+                <label>数据表告警清除时间字段名<input tyle="text" placeholder="告警清除字段名" name= "alarm_cleared_time_table" value="AlarmClearedTime"/></label>
 
-                <label>每次读取告警数<input style="number" placeholder="每次读取告警数"/></label>
-                <label>是否去除闪断告警<input style="text" placeholder="true"/></label>
-                <label>闪断告警时长定义<input style="number" placeholder="10"/></label>
-                <label>闪断告警合并时长门限<input style="number" placeholder="30"/></label>
-                <label>闪断告警合并条数门限<input style="number" placeholder="3"/></label>
+                <label>数据表src建立相关<input tyle="text" placeholder="src相关" name= "alarm_src_sql_type" value="VARCHAR(30)"/ ></label>
+                <label>数据表id建立相关<input tyle="text" placeholder="id相关" name= "alarm_id_sql_type" value="VARCHAR(30)" /></label>
+                <label>数据表name建立相关<input tyle="text" placeholder="name相关" name= "alarm_name_sql_type", value="VARCHAR(100)"/></label>
+                <label>数据表发生时间建立相关<input tyle="text" placeholder="数据表发生时间建立相关" name="alarm_raised_time_sql_type" value="DATETIME" /></label>
+                <label>数据表清除时间建立相关<input tyle="text" placeholder="数据表清除时间建立相关" name="alarm_cleared_time_sql_type"  value="DATETIME" /></label>
 
-                <label>支持度门限<input style="number" placeholder="10"/></label>
-                <label>置信度门限<input style="text" placeholder="0.3"/></label>
+                <label>每次读取告警数<input tyle="number" placeholder="每次读取告警数" name= "block_size" value= 10000 /></label>
+                <label>是否去除闪断告警<input tyle="text" placeholder="true" name="flash_on" value=true /></label>
+                <label>闪断告警时长定义<input tyle="number" placeholder="10" name= "flash_threshold" value= 10 /></label>
+                <label>闪断告警合并时长门限<input tyle="number" placeholder="30" name=  "merge_time_threshold" value=30 /></label>
+                <label>闪断告警合并条数门限<input tyle="number" placeholder="3" name="merge_count_threshold"  value=3 /></label>
 
-                <label>时间窗长度<input style="number" placeholder="60"/></label>
-                <label>时间窗滑动步长<input style="text" placeholder="20"/></label>
-                <label>支持度门限<input style="number" placeholder="10"/></label>
-                <label>置信度门限<input style="text" placeholder="0.8"/></label>
-                <label>挖掘规则长度<input style="number" placeholder="2"/></label>
+                <label>支持度门限<input tyle="number" placeholder="10" name="corr_support" value=10 /></label>
+                <label>置信度门限<input tyle="text" placeholder="0.3" name="corr_threshold" value=0.8 /></label>
 
-                <label>算法结果是交或并<input style="text" placeholder="true"/></label>
-
+                <label>时间窗长度<input tyle="number" placeholder="60" name="win_width"  value=60 /></label>
+                <label>时间窗滑动步长<input tyle="text" placeholder="20" name="move_len" value=20 /></label>
+                <label>支持度门限<input tyle="number" placeholder="10" name="support"  value=10 /></label>
+                <label>置信度门限<input tyle="text" placeholder="0.8" name="conf" value=0.8 /></label>
+                <label>挖掘规则长度<input tyle="number" placeholder="2" name="k"   value=2 /></label>
+<!-- <有两个support，需要改变！！！correlation中改成corr> -->
+                <label>算法结果是交或并<select name="and_or"></label>
+                    <option value="true" >算法取交</option>   
+                    <option value="false" selected>算法取并</option>     
+                </select>   
              </div>
 
              

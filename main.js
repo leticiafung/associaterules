@@ -31,8 +31,8 @@ app.route('/answer')
     var content = Buffer.concat(chunks,size).toString();
     req.body = querystring.parse(content);//like {xx:aa;cc:b}
     //写算法需要的json
-    readAndwrite.transferAsparameter(req.body);
-    console.log('after:'+ JSON.stringify(req.body));
+    req.body = readAndwrite.transferAsparameter(req.body);
+  //  console.log('after:'+ JSON.stringify(req.body));
     readAndwrite.calculateData(req.body,res);
     });
   //console.log(req.body);

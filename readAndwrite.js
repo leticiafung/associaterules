@@ -101,15 +101,20 @@ function transferAsparameter(reqbody) {
 		else if(count >= 20 && count < 25)
 			temp['data_process'][i] = reqbody[i];
 		else if(count >= 25 && count < 27)
-			temp['correlation_algorithm'][i] = reqbody[i];
+		{
+			if(count == 25)
+				temp['correlation_algorithm']['support'] = reqbody[i];
+			else
+				temp['correlation_algorithm'][i] = reqbody[i];
+		}
 		else if(count >= 27 && count < 32)
 			temp['association_rules'][i] = reqbody[i];
 		else
 			temp['root_analysis'][i] = reqbody[i];
 		count++;
 	}
-	reqbody = temp ;
-	//console.log(reqbody['path']);
+	return temp ;
+	console.log('reqpath:' + JSON.stringify(temp));
 
 }
 

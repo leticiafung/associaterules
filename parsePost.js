@@ -1,4 +1,4 @@
-
+//之前的上传文件使用，目前没有使用
 //return the boundary value
 function getContenttype(headers) {
   var type = headers['content-type'].split(';');

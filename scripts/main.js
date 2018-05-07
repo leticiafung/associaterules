@@ -7,8 +7,8 @@ window.onload = function() {
     uplist.addEventListener("click",foldunfold,false);
     highlightP();
 
-    var form = document.getElementById("upload");
-    form.addEventListener("submit", formSubmit, false);
+   // var form = document.getElementById("upload");
+    //form.addEventListener("submit", formSubmit, false);
 
 
 
