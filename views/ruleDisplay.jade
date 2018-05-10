@@ -14,16 +14,42 @@ html(lang="en")
         li 
           a(href="drawpic.html") 告警数据
     #functionbox
+      - var head = ["xId","xName","xSupport","yId","yName","ySupport","xySupport","confidence"]
+      - var a_rule = []
+      - var count = 0
+      mixin display(item)
+        tr
+          each key in item
+            td #{key}
       table#ruleDispaly(border)
         thead
           tr
-          each value,key in items[0]
-            th #{key}
-        each item in items
-          tr
-            each value in item
-              td #{value}
+            each value in head
+              th #{value}
+        each rule in rules
+          - each val ,key in rule
+            - if(count == 0)
+              - a_rule[0] = val
+            - else if(count == 1)
+              - a_rule[6] = val
+            - else if(count == 2)
+              - a_rule[3] = val
+            - else if(count == 3)
+              - a_rule[7] = val
+            - else if(count == 4)
+              - a_rule[4] = val
+            - else if(count == 5)
+              - a_rule[1] = val
+            - else if(count == 6)
+              - a_rule[2] = val
+            - else
+              - a_rule[5] = val
+            - count = count +1
+          - count = 0
+          +display(a_rule)
+
     button#showgraph(type="button") 分析关联规则
+
 
     script(type="text/javascript",src='../scripts/ruleDisplay.js')
 

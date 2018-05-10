@@ -1,0 +1,286 @@
+{
+    "graphs": [{
+        "edges": [
+            {
+                "xId": "Trunk system",
+                "xySupport": 1986,
+                "yId": "Signaling system",
+                "confidence": 0.846908315565032,
+                "yName": "Signaling system",
+                "xName": "Trunk system",
+                "xSupport": 2345,
+                "ySupport": 25976
+            },
+            {
+                "xId": "Power system",
+                "xySupport": 555,
+                "yId": "Signaling system",
+                "confidence": 0.925,
+                "yName": "Signaling system",
+                "xName": "Power system",
+                "xSupport": 600,
+                "ySupport": 1268
+            },
+            {
+                "xId": "Power system",
+                "xySupport": 231,
+                "yId": "Hardware system",
+                "confidence": 0.8988326848249028,
+                "yName": "Hardware system",
+                "xName": "Power system",
+                "xSupport": 257,
+                "ySupport": 532
+            },
+            {
+                "xId": "Power system",
+                "xySupport": 72,
+                "yId": "Communication system",
+                "confidence": 0.935064935064935,
+                "yName": "Communication system",
+                "xName": "Power system",
+                "xSupport": 77,
+                "ySupport": 77
+            },
+            {
+                "xId": "Signaling system",
+                "xySupport": 10858,
+                "yId": "Trunk system",
+                "confidence": 0.8267093040962388,
+                "yName": "Trunk system",
+                "xName": "Signaling system",
+                "xSupport": 13134,
+                "ySupport": 41687
+            },
+            {
+                "xId": "Signaling system",
+                "xySupport": 364,
+                "yId": "Hardware system",
+                "confidence": 0.914572864321608,
+                "yName": "Hardware system",
+                "xName": "Signaling system",
+                "xSupport": 398,
+                "ySupport": 1097
+            },
+            {
+                "xId": "Hardware system",
+                "xySupport": 540,
+                "yId": "Signaling system",
+                "confidence": 0.9326424870466321,
+                "yName": "Signaling system",
+                "xName": "Hardware system",
+                "xSupport": 579,
+                "ySupport": 22949
+            },
+            {
+                "xId": "Running system",
+                "xySupport": 205,
+                "yId": "Signaling system",
+                "confidence": 0.9808612440191388,
+                "yName": "Signaling system",
+                "xName": "Running system",
+                "xSupport": 209,
+                "ySupport": 360
+            },
+            {
+                "xId": "Running system",
+                "xySupport": 177,
+                "yId": "Hardware system",
+                "confidence": 0.9779005524861878,
+                "yName": "Hardware system",
+                "xName": "Running system",
+                "xSupport": 181,
+                "ySupport": 810
+            },
+            {
+                "xId": "Communication system",
+                "xySupport": 142,
+                "yId": "Signaling system",
+                "confidence": 0.8606060606060606,
+                "yName": "Signaling system",
+                "xName": "Communication system",
+                "xSupport": 165,
+                "ySupport": 512
+            },
+            {
+                "xId": "Communication system",
+                "xySupport": 49,
+                "yId": "Power system",
+                "confidence": 0.8448275862068966,
+                "yName": "Power system",
+                "xName": "Communication system",
+                "xSupport": 58,
+                "ySupport": 232
+            },
+            {
+                "xId": "Communication system",
+                "xySupport": 10,
+                "yId": "Hardware system",
+                "confidence": 1,
+                "yName": "Hardware system",
+                "xName": "Communication system",
+                "xSupport": 10,
+                "ySupport": 11
+            }
+        ],
+        "nodes": [
+            {
+                "name": "Trunk system",
+                "count": 44032,
+                "score": 0.020199011468793215,
+                "id": "Trunk system"
+            },
+            {
+                "name": "Power system",
+                "count": 1166,
+                "score": 1.9140700336829413,
+                "id": "Power system"
+            },
+            {
+                "name": "Signaling system",
+                "count": 64597,
+                "score": -2.8047359388190167,
+                "id": "Signaling system"
+            },
+            {
+                "name": "Hardware system",
+                "count": 3029,
+                "score": -2.8586636145860664,
+                "id": "Hardware system"
+            },
+            {
+                "name": "Running system",
+                "count": 390,
+                "score": 1.9587617965053266,
+                "id": "Running system"
+            },
+            {
+                "name": "Communication system",
+                "count": 310,
+                "score": 1.7703687117480222,
+                "id": "Communication system"
+            }
+        ]
+    }],
+    "rules": [
+        {
+            "xId": "撒地方斯蒂芬system",
+            "xySupport": 10858,
+            "yId": "Trunk system",
+            "confidence": 0.8267093040962388,
+            "yName": "Trunk system",
+            "xName": "Signaling system",
+            "xSupport": 13134,
+            "ySupport": 41687
+        },
+        {
+            "xId": "Trunk system",
+            "xySupport": 1986,
+            "yId": "Signaling system",
+            "confidence": 0.846908315565032,
+            "yName": "Signaling system",
+            "xName": "Trunk system",
+            "xSupport": 2345,
+            "ySupport": 25976
+        },
+        {
+            "xId": "Power system",
+            "xySupport": 555,
+            "yId": "Signaling system",
+            "confidence": 0.925,
+            "yName": "Signaling system",
+            "xName": "Power system",
+            "xSupport": 600,
+            "ySupport": 1268
+        },
+        {
+            "xId": "Hardware system",
+            "xySupport": 540,
+            "yId": "Signaling system",
+            "confidence": 0.9326424870466321,
+            "yName": "Signaling system",
+            "xName": "Hardware system",
+            "xSupport": 579,
+            "ySupport": 22949
+        },
+        {
+            "xId": "Signaling system",
+            "xySupport": 364,
+            "yId": "Hardware system",
+            "confidence": 0.914572864321608,
+            "yName": "Hardware system",
+            "xName": "Signaling system",
+            "xSupport": 398,
+            "ySupport": 1097
+        },
+        {
+            "xId": "Power system",
+            "xySupport": 231,
+            "yId": "Hardware system",
+            "confidence": 0.8988326848249028,
+            "yName": "Hardware system",
+            "xName": "Power system",
+            "xSupport": 257,
+            "ySupport": 532
+        },
+        {
+            "xId": "Running system",
+            "xySupport": 205,
+            "yId": "Signaling system",
+            "confidence": 0.9808612440191388,
+            "yName": "Signaling system",
+            "xName": "Running system",
+            "xSupport": 209,
+            "ySupport": 360
+        },
+        {
+            "xId": "Running system",
+            "xySupport": 177,
+            "yId": "Hardware system",
+            "confidence": 0.9779005524861878,
+            "yName": "Hardware system",
+            "xName": "Running system",
+            "xSupport": 181,
+            "ySupport": 810
+        },
+        {
+            "xId": "Communication system",
+            "xySupport": 142,
+            "yId": "Signaling system",
+            "confidence": 0.8606060606060606,
+            "yName": "Signaling system",
+            "xName": "Communication system",
+            "xSupport": 165,
+            "ySupport": 512
+        },
+        {
+            "xId": "Power system",
+            "xySupport": 72,
+            "yId": "Communication system",
+            "confidence": 0.935064935064935,
+            "yName": "Communication system",
+            "xName": "Power system",
+            "xSupport": 77,
+            "ySupport": 77
+        },
+        {
+            "xId": "Communication system",
+            "xySupport": 49,
+            "yId": "Power system",
+            "confidence": 0.8448275862068966,
+            "yName": "Power system",
+            "xName": "Communication system",
+            "xSupport": 58,
+            "ySupport": 232
+        },
+        {
+            "xId": "Communication system",
+            "xySupport": 10,
+            "yId": "Hardware system",
+            "confidence": 1,
+            "yName": "Hardware system",
+            "xName": "Communication system",
+            "xSupport": 10,
+            "ySupport": 11
+        }
+    ]
+}

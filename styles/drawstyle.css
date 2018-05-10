@@ -124,6 +124,9 @@ nav li a:hover,nav li a:active,.here {
 #hiddenv {
     display: none;
 }
+.hiddenv {
+    display: none;
+}
 /* 画图的设置 */
 .link {
     fill: none;

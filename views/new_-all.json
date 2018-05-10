@@ -1,0 +1,780 @@
+{
+    "graphs": [
+        {
+            "edges": [
+                {
+                    "xId": "26819",
+                    "xySupport": 174,
+                    "yId": "29240",
+                    "confidence": 0.9871865206856029,
+                    "yName": "小区不可用告警",
+                    "xName": "配置数据超出License限制告警",
+                    "xSupport": 148,
+                    "ySupport": 174
+                },
+                {
+                    "xId": "26819",
+                    "xySupport": 152,
+                    "yId": "26214",
+                    "confidence": 0.9665709693764174,
+                    "yName": "单板下电告警",
+                    "xName": "配置数据超出License限制告警",
+                    "xSupport": 148,
+                    "ySupport": 152
+                },
+                {
+                    "xId": "26214",
+                    "xySupport": 174,
+                    "yId": "29240",
+                    "confidence": 0.9533952708346205,
+                    "yName": "小区不可用告警",
+                    "xName": "单板下电告警",
+                    "xSupport": 152,
+                    "ySupport": 174
+                },
+                {
+                    "xId": "26324",
+                    "xySupport": 381,
+                    "yId": "29240",
+                    "confidence": 0.987140535599636,
+                    "yName": "小区不可用告警",
+                    "xName": "BBU IR接口异常告警",
+                    "xSupport": 121,
+                    "ySupport": 381
+                },
+                {
+                    "xId": "26324",
+                    "xySupport": 100,
+                    "yId": "26235",
+                    "confidence": 0.9182527309856443,
+                    "yName": "射频单元维护链路异常告警",
+                    "xName": "BBU IR接口异常告警",
+                    "xSupport": 47,
+                    "ySupport": 100
+                },
+                {
+                    "xId": "26235",
+                    "xySupport": 1871,
+                    "yId": "29248",
+                    "confidence": 0.9979902141725749,
+                    "yName": "射频单元业务不可用告警",
+                    "xName": "射频单元维护链路异常告警",
+                    "xSupport": 1465,
+                    "ySupport": 1871
+                },
+                {
+                    "xId": "26235",
+                    "xySupport": 20,
+                    "yId": "29240",
+                    "confidence": 0.9607288498913734,
+                    "yName": "小区不可用告警",
+                    "xName": "射频单元维护链路异常告警",
+                    "xSupport": 263,
+                    "ySupport": 20
+                },
+                {
+                    "xId": "25952",
+                    "xySupport": 716,
+                    "yId": "29204",
+                    "confidence": 0.9880800816624699,
+                    "yName": "X2接口故障告警",
+                    "xName": "用户面承载链路故障告警",
+                    "xSupport": 783,
+                    "ySupport": 716
+                },
+                {
+                    "xId": "25954",
+                    "xySupport": 153,
+                    "yId": "29213",
+                    "confidence": 0.9864050786209174,
+                    "yName": "基站S1控制面传输中断告警",
+                    "xName": "用户面故障告警",
+                    "xSupport": 223,
+                    "ySupport": 153
+                },
+                {
+                    "xId": "25954",
+                    "xySupport": 12,
+                    "yId": "29204",
+                    "confidence": 0.9279731261616987,
+                    "yName": "X2接口故障告警",
+                    "xName": "用户面故障告警",
+                    "xSupport": 11,
+                    "ySupport": 12
+                },
+                {
+                    "xId": "26503",
+                    "xySupport": 206,
+                    "yId": "29248",
+                    "confidence": 0.9055128989086778,
+                    "yName": "射频单元业务不可用告警",
+                    "xName": "射频单元光模块收发异常告警",
+                    "xSupport": 90,
+                    "ySupport": 206
+                },
+                {
+                    "xId": "26503",
+                    "xySupport": 17,
+                    "yId": "26235",
+                    "confidence": 0.8807083031558273,
+                    "yName": "射频单元维护链路异常告警",
+                    "xName": "射频单元光模块收发异常告警",
+                    "xSupport": 10,
+                    "ySupport": 17
+                },
+                {
+                    "xId": "26538",
+                    "xySupport": 418,
+                    "yId": "29248",
+                    "confidence": 0.8777391014499808,
+                    "yName": "射频单元业务不可用告警",
+                    "xName": "射频单元时钟异常告警",
+                    "xSupport": 82,
+                    "ySupport": 418
+                },
+                {
+                    "xId": "29248",
+                    "xySupport": 1021,
+                    "yId": "26235",
+                    "confidence": 0.995856909696622,
+                    "yName": "射频单元维护链路异常告警",
+                    "xName": "射频单元业务不可用告警",
+                    "xSupport": 1318,
+                    "ySupport": 1021
+                },
+                {
+                    "xId": "29248",
+                    "xySupport": 15,
+                    "yId": "29240",
+                    "confidence": 0.9687039213598683,
+                    "yName": "小区不可用告警",
+                    "xName": "射频单元业务不可用告警",
+                    "xSupport": 47,
+                    "ySupport": 15
+                },
+                {
+                    "xId": "29248",
+                    "xySupport": 11,
+                    "yId": "26503",
+                    "confidence": 0.8959291557375412,
+                    "yName": "射频单元光模块收发异常告警",
+                    "xName": "射频单元业务不可用告警",
+                    "xSupport": 27,
+                    "ySupport": 11
+                },
+                {
+                    "xId": "26540",
+                    "xySupport": 1903,
+                    "yId": "29248",
+                    "confidence": 0.9799155323891139,
+                    "yName": "射频单元业务不可用告警",
+                    "xName": "射频单元交流掉电告警",
+                    "xSupport": 716,
+                    "ySupport": 1903
+                },
+                {
+                    "xId": "26540",
+                    "xySupport": 973,
+                    "yId": "26235",
+                    "confidence": 0.997535168960709,
+                    "yName": "射频单元维护链路异常告警",
+                    "xName": "射频单元交流掉电告警",
+                    "xSupport": 513,
+                    "ySupport": 973
+                },
+                {
+                    "xId": "26540",
+                    "xySupport": 643,
+                    "yId": "29240",
+                    "confidence": 0.9964856723618457,
+                    "yName": "小区不可用告警",
+                    "xName": "射频单元交流掉电告警",
+                    "xSupport": 1104,
+                    "ySupport": 643
+                },
+                {
+                    "xId": "29204",
+                    "xySupport": 1067,
+                    "yId": "25952",
+                    "confidence": 0.9914796561757748,
+                    "yName": "用户面承载链路故障告警",
+                    "xName": "X2接口故障告警",
+                    "xSupport": 745,
+                    "ySupport": 1067
+                },
+                {
+                    "xId": "26322",
+                    "xySupport": 2616,
+                    "yId": "29240",
+                    "confidence": 0.9969498650729749,
+                    "yName": "小区不可用告警",
+                    "xName": "BBU IR光模块收发异常告警",
+                    "xSupport": 771,
+                    "ySupport": 2616
+                },
+                {
+                    "xId": "26322",
+                    "xySupport": 204,
+                    "yId": "29248",
+                    "confidence": 0.9504719271495267,
+                    "yName": "射频单元业务不可用告警",
+                    "xName": "BBU IR光模块收发异常告警",
+                    "xSupport": 21,
+                    "ySupport": 204
+                },
+                {
+                    "xId": "26322",
+                    "xySupport": 107,
+                    "yId": "26235",
+                    "confidence": 0.9937574494528026,
+                    "yName": "射频单元维护链路异常告警",
+                    "xName": "BBU IR光模块收发异常告警",
+                    "xSupport": 65,
+                    "ySupport": 107
+                },
+                {
+                    "xId": "29213",
+                    "xySupport": 552,
+                    "yId": "25954",
+                    "confidence": 0.9814828934315233,
+                    "yName": "用户面故障告警",
+                    "xName": "基站S1控制面传输中断告警",
+                    "xSupport": 354,
+                    "ySupport": 552
+                },
+                {
+                    "xId": "29213",
+                    "xySupport": 32,
+                    "yId": "29204",
+                    "confidence": 0.9396760700978576,
+                    "yName": "X2接口故障告警",
+                    "xName": "基站S1控制面传输中断告警",
+                    "xSupport": 25,
+                    "ySupport": 32
+                },
+                {
+                    "xId": "26222",
+                    "xySupport": 68,
+                    "yId": "25954",
+                    "confidence": 0.9031652739499095,
+                    "yName": "用户面故障告警",
+                    "xName": "传输光接口异常告警",
+                    "xSupport": 57,
+                    "ySupport": 68
+                },
+                {
+                    "xId": "26222",
+                    "xySupport": 50,
+                    "yId": "29213",
+                    "confidence": 0.9044719169225922,
+                    "yName": "基站S1控制面传输中断告警",
+                    "xName": "传输光接口异常告警",
+                    "xSupport": 48,
+                    "ySupport": 50
+                },
+                {
+                    "xId": "29240",
+                    "xySupport": 497,
+                    "yId": "26235",
+                    "confidence": 0.995499695715801,
+                    "yName": "射频单元维护链路异常告警",
+                    "xName": "小区不可用告警",
+                    "xSupport": 354,
+                    "ySupport": 497
+                },
+                {
+                    "xId": "29240",
+                    "xySupport": 10,
+                    "yId": "26260",
+                    "confidence": 0.8808367598921416,
+                    "yName": "系统时钟不可用告警",
+                    "xName": "小区不可用告警",
+                    "xSupport": 19,
+                    "ySupport": 10
+                },
+                {
+                    "xId": "29240",
+                    "xySupport": 10,
+                    "yId": "25954",
+                    "confidence": 0.9777542255759857,
+                    "yName": "用户面故障告警",
+                    "xName": "小区不可用告警",
+                    "xSupport": 16,
+                    "ySupport": 10
+                }
+            ],
+            "nodes": [
+                {
+                    "name": "配置数据超出License限制告警",
+                    "count": 296,
+                    "score": 1.9537574900620203,
+                    "id": "26819"
+                },
+                {
+                    "name": "单板下电告警",
+                    "count": 304,
+                    "score": -0.013175698541796899,
+                    "id": "26214"
+                },
+                {
+                    "name": "BBU IR接口异常告警",
+                    "count": 168,
+                    "score": 1.9053932665852802,
+                    "id": "26324"
+                },
+                {
+                    "name": "射频单元维护链路异常告警",
+                    "count": 4443,
+                    "score": -3.822891193903458,
+                    "id": "26235"
+                },
+                {
+                    "name": "用户面承载链路故障告警",
+                    "count": 1850,
+                    "score": -0.0033995745133049704,
+                    "id": "25952"
+                },
+                {
+                    "name": "用户面故障告警",
+                    "count": 864,
+                    "score": -0.9480241881748024,
+                    "id": "25954"
+                },
+                {
+                    "name": "射频单元光模块收发异常告警",
+                    "count": 111,
+                    "score": 0.8902920463269639,
+                    "id": "26503"
+                },
+                {
+                    "name": "射频单元时钟异常告警",
+                    "count": 82,
+                    "score": 0.8777391014499808,
+                    "id": "26538"
+                },
+                {
+                    "name": "系统时钟不可用告警",
+                    "count": 10,
+                    "score": -0.8808367598921416,
+                    "id": "26260"
+                },
+                {
+                    "name": "射频单元业务不可用告警",
+                    "count": 5994,
+                    "score": -1.8511396872758428,
+                    "id": "29248"
+                },
+                {
+                    "name": "射频单元交流掉电告警",
+                    "count": 2333,
+                    "score": 2.9739363737116684,
+                    "id": "26540"
+                },
+                {
+                    "name": "X2接口故障告警",
+                    "count": 1505,
+                    "score": -1.8642496217462514,
+                    "id": "29204"
+                },
+                {
+                    "name": "BBU IR光模块收发异常告警",
+                    "count": 857,
+                    "score": 2.941179241675304,
+                    "id": "26322"
+                },
+                {
+                    "name": "基站S1控制面传输中断告警",
+                    "count": 582,
+                    "score": 0.03028196798587124,
+                    "id": "29213"
+                },
+                {
+                    "name": "传输光接口异常告警",
+                    "count": 105,
+                    "score": 1.8076371908725017,
+                    "id": "26222"
+                },
+                {
+                    "name": "小区不可用告警",
+                    "count": 4412,
+                    "score": -3.9964999546219935,
+                    "id": "29240"
+                }
+            ]
+        },
+        {
+            "edges": [{
+                "xId": "25888",
+                "xySupport": 274,
+                "yId": "29201",
+                "confidence": 0.9215014137813541,
+                "yName": "S1接口故障告警",
+                "xName": "SCTP链路故障告警",
+                "xSupport": 281,
+                "ySupport": 274
+            }],
+            "nodes": [
+                {
+                    "name": "S1接口故障告警",
+                    "count": 274,
+                    "score": -0.9215014137813541,
+                    "id": "29201"
+                },
+                {
+                    "name": "SCTP链路故障告警",
+                    "count": 281,
+                    "score": 0.9215014137813541,
+                    "id": "25888"
+                }
+            ]
+        },
+        {
+            "edges": [{
+                "xId": "26122",
+                "xySupport": 19,
+                "yId": "26262",
+                "confidence": 0.8518403890116868,
+                "yName": "时钟参考源异常告警",
+                "xName": "星卡锁星不足告警",
+                "xSupport": 10,
+                "ySupport": 19
+            }],
+            "nodes": [
+                {
+                    "name": "时钟参考源异常告警",
+                    "count": 19,
+                    "score": -0.8518403890116868,
+                    "id": "26262"
+                },
+                {
+                    "name": "星卡锁星不足告警",
+                    "count": 10,
+                    "score": 0.8518403890116868,
+                    "id": "26122"
+                }
+            ]
+        }
+    ],
+    "rules": [
+        {
+            "xId": "26322",
+            "xySupport": 2616,
+            "yId": "29240",
+            "confidence": 0.9969498650729749,
+            "yName": "小区不可用告警",
+            "xName": "BBU IR光模块收发异常告警",
+            "xSupport": 771,
+            "ySupport": 2616
+        },
+        {
+            "xId": "26540",
+            "xySupport": 1903,
+            "yId": "29248",
+            "confidence": 0.9799155323891139,
+            "yName": "射频单元业务不可用告警",
+            "xName": "射频单元交流掉电告警",
+            "xSupport": 716,
+            "ySupport": 1903
+        },
+        {
+            "xId": "26235",
+            "xySupport": 1871,
+            "yId": "29248",
+            "confidence": 0.9979902141725749,
+            "yName": "射频单元业务不可用告警",
+            "xName": "射频单元维护链路异常告警",
+            "xSupport": 1465,
+            "ySupport": 1871
+        },
+        {
+            "xId": "29204",
+            "xySupport": 1067,
+            "yId": "25952",
+            "confidence": 0.9914796561757748,
+            "yName": "用户面承载链路故障告警",
+            "xName": "X2接口故障告警",
+            "xSupport": 745,
+            "ySupport": 1067
+        },
+        {
+            "xId": "29248",
+            "xySupport": 1021,
+            "yId": "26235",
+            "confidence": 0.995856909696622,
+            "yName": "射频单元维护链路异常告警",
+            "xName": "射频单元业务不可用告警",
+            "xSupport": 1318,
+            "ySupport": 1021
+        },
+        {
+            "xId": "26540",
+            "xySupport": 973,
+            "yId": "26235",
+            "confidence": 0.997535168960709,
+            "yName": "射频单元维护链路异常告警",
+            "xName": "射频单元交流掉电告警",
+            "xSupport": 513,
+            "ySupport": 973
+        },
+        {
+            "xId": "25952",
+            "xySupport": 716,
+            "yId": "29204",
+            "confidence": 0.9880800816624699,
+            "yName": "X2接口故障告警",
+            "xName": "用户面承载链路故障告警",
+            "xSupport": 783,
+            "ySupport": 716
+        },
+        {
+            "xId": "26540",
+            "xySupport": 643,
+            "yId": "29240",
+            "confidence": 0.9964856723618457,
+            "yName": "小区不可用告警",
+            "xName": "射频单元交流掉电告警",
+            "xSupport": 1104,
+            "ySupport": 643
+        },
+        {
+            "xId": "29213",
+            "xySupport": 552,
+            "yId": "25954",
+            "confidence": 0.9814828934315233,
+            "yName": "用户面故障告警",
+            "xName": "基站S1控制面传输中断告警",
+            "xSupport": 354,
+            "ySupport": 552
+        },
+        {
+            "xId": "29240",
+            "xySupport": 497,
+            "yId": "26235",
+            "confidence": 0.995499695715801,
+            "yName": "射频单元维护链路异常告警",
+            "xName": "小区不可用告警",
+            "xSupport": 354,
+            "ySupport": 497
+        },
+        {
+            "xId": "26538",
+            "xySupport": 418,
+            "yId": "29248",
+            "confidence": 0.8777391014499808,
+            "yName": "射频单元业务不可用告警",
+            "xName": "射频单元时钟异常告警",
+            "xSupport": 82,
+            "ySupport": 418
+        },
+        {
+            "xId": "26324",
+            "xySupport": 381,
+            "yId": "29240",
+            "confidence": 0.987140535599636,
+            "yName": "小区不可用告警",
+            "xName": "BBU IR接口异常告警",
+            "xSupport": 121,
+            "ySupport": 381
+        },
+        {
+            "xId": "25888",
+            "xySupport": 274,
+            "yId": "29201",
+            "confidence": 0.9215014137813541,
+            "yName": "S1接口故障告警",
+            "xName": "SCTP链路故障告警",
+            "xSupport": 281,
+            "ySupport": 274
+        },
+        {
+            "xId": "26503",
+            "xySupport": 206,
+            "yId": "29248",
+            "confidence": 0.9055128989086778,
+            "yName": "射频单元业务不可用告警",
+            "xName": "射频单元光模块收发异常告警",
+            "xSupport": 90,
+            "ySupport": 206
+        },
+        {
+            "xId": "26322",
+            "xySupport": 204,
+            "yId": "29248",
+            "confidence": 0.9504719271495267,
+            "yName": "射频单元业务不可用告警",
+            "xName": "BBU IR光模块收发异常告警",
+            "xSupport": 21,
+            "ySupport": 204
+        },
+        {
+            "xId": "26819",
+            "xySupport": 174,
+            "yId": "29240",
+            "confidence": 0.9871865206856029,
+            "yName": "小区不可用告警",
+            "xName": "配置数据超出License限制告警",
+            "xSupport": 148,
+            "ySupport": 174
+        },
+        {
+            "xId": "26214",
+            "xySupport": 174,
+            "yId": "29240",
+            "confidence": 0.9533952708346205,
+            "yName": "小区不可用告警",
+            "xName": "单板下电告警",
+            "xSupport": 152,
+            "ySupport": 174
+        },
+        {
+            "xId": "25954",
+            "xySupport": 153,
+            "yId": "29213",
+            "confidence": 0.9864050786209174,
+            "yName": "基站S1控制面传输中断告警",
+            "xName": "用户面故障告警",
+            "xSupport": 223,
+            "ySupport": 153
+        },
+        {
+            "xId": "26819",
+            "xySupport": 152,
+            "yId": "26214",
+            "confidence": 0.9665709693764174,
+            "yName": "单板下电告警",
+            "xName": "配置数据超出License限制告警",
+            "xSupport": 148,
+            "ySupport": 152
+        },
+        {
+            "xId": "26322",
+            "xySupport": 107,
+            "yId": "26235",
+            "confidence": 0.9937574494528026,
+            "yName": "射频单元维护链路异常告警",
+            "xName": "BBU IR光模块收发异常告警",
+            "xSupport": 65,
+            "ySupport": 107
+        },
+        {
+            "xId": "26324",
+            "xySupport": 100,
+            "yId": "26235",
+            "confidence": 0.9182527309856443,
+            "yName": "射频单元维护链路异常告警",
+            "xName": "BBU IR接口异常告警",
+            "xSupport": 47,
+            "ySupport": 100
+        },
+        {
+            "xId": "26222",
+            "xySupport": 68,
+            "yId": "25954",
+            "confidence": 0.9031652739499095,
+            "yName": "用户面故障告警",
+            "xName": "传输光接口异常告警",
+            "xSupport": 57,
+            "ySupport": 68
+        },
+        {
+            "xId": "26222",
+            "xySupport": 50,
+            "yId": "29213",
+            "confidence": 0.9044719169225922,
+            "yName": "基站S1控制面传输中断告警",
+            "xName": "传输光接口异常告警",
+            "xSupport": 48,
+            "ySupport": 50
+        },
+        {
+            "xId": "29213",
+            "xySupport": 32,
+            "yId": "29204",
+            "confidence": 0.9396760700978576,
+            "yName": "X2接口故障告警",
+            "xName": "基站S1控制面传输中断告警",
+            "xSupport": 25,
+            "ySupport": 32
+        },
+        {
+            "xId": "26235",
+            "xySupport": 20,
+            "yId": "29240",
+            "confidence": 0.9607288498913734,
+            "yName": "小区不可用告警",
+            "xName": "射频单元维护链路异常告警",
+            "xSupport": 263,
+            "ySupport": 20
+        },
+        {
+            "xId": "26122",
+            "xySupport": 19,
+            "yId": "26262",
+            "confidence": 0.8518403890116868,
+            "yName": "时钟参考源异常告警",
+            "xName": "星卡锁星不足告警",
+            "xSupport": 10,
+            "ySupport": 19
+        },
+        {
+            "xId": "26503",
+            "xySupport": 17,
+            "yId": "26235",
+            "confidence": 0.8807083031558273,
+            "yName": "射频单元维护链路异常告警",
+            "xName": "射频单元光模块收发异常告警",
+            "xSupport": 10,
+            "ySupport": 17
+        },
+        {
+            "xId": "29248",
+            "xySupport": 15,
+            "yId": "29240",
+            "confidence": 0.9687039213598683,
+            "yName": "小区不可用告警",
+            "xName": "射频单元业务不可用告警",
+            "xSupport": 47,
+            "ySupport": 15
+        },
+        {
+            "xId": "25954",
+            "xySupport": 12,
+            "yId": "29204",
+            "confidence": 0.9279731261616987,
+            "yName": "X2接口故障告警",
+            "xName": "用户面故障告警",
+            "xSupport": 11,
+            "ySupport": 12
+        },
+        {
+            "xId": "29248",
+            "xySupport": 11,
+            "yId": "26503",
+            "confidence": 0.8959291557375412,
+            "yName": "射频单元光模块收发异常告警",
+            "xName": "射频单元业务不可用告警",
+            "xSupport": 27,
+            "ySupport": 11
+        },
+        {
+            "xId": "29240",
+            "xySupport": 10,
+            "yId": "26260",
+            "confidence": 0.8808367598921416,
+            "yName": "系统时钟不可用告警",
+            "xName": "小区不可用告警",
+            "xSupport": 19,
+            "ySupport": 10
+        },
+        {
+            "xId": "29240",
+            "xySupport": 10,
+            "yId": "25954",
+            "confidence": 0.9777542255759857,
+            "yName": "用户面故障告警",
+            "xName": "小区不可用告警",
+            "xSupport": 16,
+            "ySupport": 10
+        }
+    ]
+}

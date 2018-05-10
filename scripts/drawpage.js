@@ -21,12 +21,16 @@
 
  // var links =  [{"src_id":"25888","src_name":"SCTP链路故障告警","des_id":"29201",
     //    "des_name":"S1接口故障告警","count":"220","weight":"0.9482758620689655"}];
-    var links = JSON.parse(document.getElementById('hiddenv').innerText);
+    //var links = JSON.parse(document.getElementsById('hiddenv').innerText);
+    var links = JSON.parse(document.getElementsByClassName('hiddenv')[0].innerText);
     var nodes = {};
     function draw() {
         links.forEach(function (link) {
-            link.source = nodes[link.src_name] || (nodes[link.src_name] = {name: link.src_name});
-            link.target = nodes[link.des_name] || (nodes[link.des_name] = {name: link.des_name});
+           // link.source = nodes[link.src_name] || (nodes[link.src_name] = {name: link.src_name});
+           // link.target = nodes[link.des_name] || (nodes[link.des_name] = {name: link.des_name});
+            link.source = nodes[link.xName] || (nodes[link.xName] = {name: link.xName});
+            link.target = nodes[link.yName] || (nodes[link.yName] = {name: link.yName});
+
         });
     }
      draw();
@@ -116,7 +120,9 @@
         edges_text.append('textPath')
             .attr('xlink:href',function(d,i) {return '#edgepath'+i})
             .style("pointer-events", "none")
-            .text(function(d){return d.weight;});
+            .text(function(d){return d.confidence.toFixed(3);});
+            //changehere
+            // .text(function(d){return d.weight;});
 
 //圆圈
         var circle = svg.append("g").selectAll("circle")

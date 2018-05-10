@@ -1,6 +1,7 @@
 {
 
-	"items":[{"1":"源是什么目的是什么"},{"2":"yuanmudinsghisdifjlw krjf s,dfns,df sdfs"}],
+	"items":[[{"1":"源是什么目的是什么"},{"2":"yuanmudinsghisdifjlw krjf s,dfns,df sdfs"}],
+		[{"1":"源是什么目的是"},{"2":"yuanmudinsghisdifjlw krjf s,dfns,df ss"}]],
 	"drawdata": [{"src_id":"25888","src_name":"SCTP链路故障告警","des_id":"29201","des_name":"S1接口故障告警"}]
 
 }
