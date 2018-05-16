@@ -49,16 +49,17 @@ function writeFile(filename, reqbody) {
 
 
 function calculateData(reqbody,resp) {
-  //返回给客户端以buffer形式,关联规则分析页的返回
-  let promise1 = writeFile(__dirname + '/parameter.json',reqbody);
+  //返回给客户端以buffer形式,关联规则分析页的返回,路径"D:\study\codepractice\dailyPra\associaterule\java\jar工程\parameters.json"
+  let promise1 = writeFile(__dirname + '/java/jarprj/parameters.json',reqbody);
   promise1.then(()=>{
   	console.log('writesuccessful');
-  	let promise = childExec("java -jar ReadAndWrite.jar"); 
+  	//"D:\study\codepractice\dailyPra\associaterule\java\jar工程\alarm_correlation_minning.jar"
+  	let promise = childExec("java -jar ./java/jarprj/alarm_correlation_minning.jar"); 
   	return promise;
   },(writeerr)=>{ console.log('!write error');
      return;
   }).then(()=> {	  
-  	let promise2 = readFile(__dirname+'/views/ruleDisplay.json');
+  	let promise2 = readFile(__dirname+'/java/jarprj/output/new_-all.json');
   	console.log('execsuccessful');
   	return promise2;
   },(processerror) => { console.log('!porcesserror:'+ processerror);
@@ -103,7 +104,7 @@ function transferAsparameter(reqbody) {
 		else if(count >= 25 && count < 27)
 		{
 			if(count == 25)
-				temp['correlation_algorithm']['support'] = reqbody[i];
+				temp['correlation_algorithm']['corr_support'] = reqbody[i];
 			else
 				temp['correlation_algorithm'][i] = reqbody[i];
 		}
@@ -120,7 +121,7 @@ function transferAsparameter(reqbody) {
 
 //handle the draw page 
 function renderDrawPage(res) {
-	let promise = readFile(__dirname+'/views/draw.json');
+	let promise = readFile(__dirname+'/java/jarprj/output/new_-all.json');
 	promise.then((data) => {
 		res.writeHead(200,{'Content-Type':'text/html'});
 		res.render('draw.jade', JSON.parse(data),(err,html)=>{
