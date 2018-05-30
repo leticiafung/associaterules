@@ -46,7 +46,8 @@
             .on("tick", tick)//指时间间隔，隔一段时间刷新一次画面
             .start();//开始转换
 //console.log(nodes);
-        var svg = d3.select("body").append("svg")
+        //var svg = d3.select("body").append("svg")
+        var svg = d3.select("#svgplace")
             .attr("width", width)
             .attr("height", height);
 

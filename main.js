@@ -30,8 +30,8 @@ app.route('/answer')
   req.on('end',()=>{
     var content = Buffer.concat(chunks,size).toString();
     req.body = querystring.parse(content);//like {xx:aa;cc:b}
-    //写算法需要的json
-    req.body = readAndwrite.transferAsparameter(req.body);
+    //写算法需要的json，reqbody不用重新转换格式了,button没有上传。
+   //req.body = readAndwrite.transferAsparameter(req.body);
   //  console.log('after:'+ JSON.stringify(req.body));
     readAndwrite.calculateData(req.body,res);
     });
@@ -41,6 +41,35 @@ app.route('/answer')
 //响应绘图
   app.get('/draw.html',(req,res) => {
   	readAndwrite.renderDrawPage(res);
-  })
+  });
+
+app.route('/loadRule')
+    .get((req,res)=>{
+        console.log("下载文件");
+       // let rs = fs.createReadStream('./java/jarprj/new_fp1_0.xls');
+        // let chunks = [],
+        //     data ='',
+        //     size = 0;
+        // rs.on('open',()=>{
+        //     console.log('开始读文件');
+        //     res.writeHead(200,{'Content-Type':'text/xml'});
+        // });
+        // rs.on('data',(chunk)=>{
+        //   // chunks.push(chunk);
+        //   // size += chunk.length;
+        //     res.write(chunk);
+        // });
+        // rs.on("end",(err)=>{
+        //   if(err){
+        //     console.log("readloadfilefail!");
+        //   }
+        //
+        //   //req.writeHead(200,{'Content-Type':'text/xml'});
+        //   res.end();
+        // })
+
+        res.download('./java/jarprj/new_fp1_0.xls','new_fp1_0.xls');
+
+    });
 
 

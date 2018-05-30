@@ -1,73 +1,97 @@
+/**{*/
+    /*margin:0;*/
+    /*padding: 0;*/
+/*}*/
 body {
-    background-color: #f8f9fa;
+    background: -webkit-linear-gradient(left,rgba(220,162,174,1) 30%, rgba(28,77,118,1) ); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(left,rgba(220,162,174,1) 30%, rgba(28,77,118,1) ); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(left,rgba(220,162,174,1) 30%, rgba(28,77,118,1) ); /* Firefox 3.6 - 15 */
+    background: linear-gradient(left,rgba(220,162,174,1) 30%, rgba(28,77,118,1) ); /* 标准的语法,必须放最后 */
+    font-size: 16px;
+    margin:0 !important;
+    /*background-color: #f8f9fa;*/
 }
-header {
-    background-color: rgb(47, 84, 151);
-    height: 100px;
+.site_header {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 9.375em;
+    margin:0;
+    padding: 0.25em;
+    /*border: solid;*/
 }
 header h1 {
     text-align: center;
     font-family: sans-serif;
     color: #ffffff;
     position: relative;
-    top:30%
+    top:20%
 }
-nav {
-    float: left;
-    margin-left: 10%;
-    width: 12%;
-    margin-top:5%;
-    height: 500px;
-    /*background-color: darkgrey;*/
-    border: solid 3px;
-    border-color: rgba(0,0,0,.125);
-    /*overflow: hidden;*/
+
+.input_title{
+    height: 10%;
+    background-color: rgba(250,251,253,1);
     border-radius: 20px;
-    /*padding: 2px;*/
-    }
-
-
-
-nav ul {
-    width:auto;
-    /*float:left;*/
-    overflow: hidden;
-    margin: 0px;
-    padding: 0px;
-   /*border: dotted;*/
-    /*border-color: red;*/
-
-
-}
-nav li {
-    display: block;
-    height: auto;
-    /*width: 100%;*/
-    margin-top: 5px;
-    padding: 5px;
-    list-style: none;
-    /*border: solid;*/
-    /*border-color: black;*/
-    margin-left: 0px;
-
-}
-nav li a {
-    display: block;
-    width: 100%;
-    padding:5px ;
-    /*border: solid 0.5px;*/
-    /*border-color: rgba(0,0,0,.125);*/
-    text-decoration:none ;
-    color: black;
-    font-family: sans-serif;
-    /*float: left;*/
     text-align: center;
-    font-size: 15px;
+    font-size: 2em;
+    color: rgba(74,103,137,1);
+    padding-top: 0.5em;
+    margin-bottom: 1em;
 }
-nav li a:hover,nav li a:active,.here {
-   background-color: darkgrey;
-    color: white;
-}
+/*nav {*/
+    /*float: left;*/
+    /*margin-left: 10%;*/
+    /*width: 12%;*/
+    /*margin-top:5%;*/
+    /*height: 500px;*/
+    /*!*background-color: darkgrey;*!*/
+    /*border: solid 3px;*/
+    /*border-color: rgba(0,0,0,.125);*/
+    /*!*overflow: hidden;*!*/
+    /*border-radius: 20px;*/
+    /*!*padding: 2px;*!*/
+    /*}*/
+
+
+
+/*nav ul {*/
+    /*width:auto;*/
+    /*!*float:left;*!*/
+    /*overflow: hidden;*/
+    /*margin: 0px;*/
+    /*padding: 0px;*/
+   /*!*border: dotted;*!*/
+    /*!*border-color: red;*!*/
+
+
+/*}*/
+/*nav li {*/
+    /*display: block;*/
+    /*height: auto;*/
+    /*!*width: 100%;*!*/
+    /*margin-top: 5px;*/
+    /*padding: 5px;*/
+    /*list-style: none;*/
+    /*!*border: solid;*!*/
+    /*!*border-color: black;*!*/
+    /*margin-left: 0px;*/
+
+/*}*/
+/*nav li a {*/
+    /*display: block;*/
+    /*width: 100%;*/
+    /*padding:5px ;*/
+    /*!*border: solid 0.5px;*!*/
+    /*!*border-color: rgba(0,0,0,.125);*!*/
+    /*text-decoration:none ;*/
+    /*color: black;*/
+    /*font-family: sans-serif;*/
+    /*!*float: left;*!*/
+    /*text-align: center;*/
+    /*font-size: 15px;*/
+/*}*/
+/*nav li a:hover,nav li a:active,.here {*/
+   /*background-color: darkgrey;*/
+    /*color: white;*/
+/*}*/
 /*nav li a:hover{*/
     /*background-color: darkgrey;*/
     /*color: white;*/
@@ -83,14 +107,21 @@ nav li a:hover,nav li a:active,.here {
 /*}*/
 
 #functionbox {
+    background-color: rgba(255,255,255,0.5);
     float: left;
-    border: solid 3px;
-    border-color: rgba(0,0,0,.125);
+    /*border: solid 3px;*/
+    /*border-color: rgba(0,0,0,.125);*/
     width: 60%;
     height: 800px;
-    margin-left: 30px;
+    margin-left: 18%;
     margin-top: 5%;
     border-radius: 20px;
+}
+
+#upload {
+    color: #666666;
+    font-size:0.8em;
+
 }
 
 #row42 {
@@ -101,14 +132,14 @@ nav li a:hover,nav li a:active,.here {
 
 }
 
-#requiredRow {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* justify-content: space-around; */
-    align-content: space-around;
+/*#requiredRow {*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+    /*!* justify-content: space-around; *!*/
+    /*align-content: space-around;*/
 
-}
+/*}*/
 svg{
     width: 300px;
     height: 300px;

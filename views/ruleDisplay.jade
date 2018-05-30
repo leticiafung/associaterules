@@ -2,17 +2,17 @@ doctype html
 html(lang="en")
   head
     meta(charset='utf-8')
-    title 告警数据
-    link(href="../styles/ruleDisplay.css",rel="stylesheet")
+    title 关联规则挖掘
+    link(href="../styles/ruleDisplay.css", rel="stylesheet")
   body
     header
       h1 关联规则挖掘
     nav
       ul.list1
         li 
-          a(href="index.html") 主页
+          a(href="../index.html") 主页
         li 
-          a(href="drawpic.html") 告警数据
+          a(href="#") 告警数据
     #functionbox
       - var head = ["xId","xName","xSupport","yId","yName","ySupport","xySupport","confidence"]
       - var a_rule = []
@@ -52,7 +52,7 @@ html(lang="en")
     button#showgraph(type="button") 分析关联规则
 
 
-    script(type="text/javascript",src='../scripts/ruleDisplay.js')
+    script(type="text/javascript",src='../scripts/ruleDisplay_b.js')
 
 
         

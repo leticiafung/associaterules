@@ -3,28 +3,36 @@
  */
 //最后整理一下浏览器兼容！！
 window.onload = function() {
-    var uplist = document.getElementById("row41");
+    let uplist = document.getElementById("row41");
     uplist.addEventListener("click",foldunfold,false);
-    highlightP();
+    let btn = document.getElementById('subbtn');
+    btn.onclick = function(){
+        // console.log(zhe);
+        var mask = document.getElementById("mask");
+        mask.style.display = 'block';
+    };
+
+   // highlightP();
 
    // var form = document.getElementById("upload");
     //form.addEventListener("submit", formSubmit, false);
-
-
 
 };
 function foldunfold() {
     var icon = document.getElementById("ficon"),
         cont = document.getElementById("row42");
 
-    if(cont.style.visibility =="hidden") {
-        icon.setAttribute("src", "images/show.png");
-        cont.style.visibility = "visible";
+    //if(cont.style.visibility ==="hidden") {
+    if(cont.style.display === "none"){
+        icon.setAttribute("src", "images/show1.png");
+        //cont.style.visibility = "visible";
+        cont.style.display ="block";
         console.log(cont.style.display);
     }
     else{
-        icon.setAttribute("src", "images/unshow.png");
-        cont.style.visibility = "hidden";
+        icon.setAttribute("src", "images/unshow1.png");
+        //cont.style.visibility = "hidden";
+        cont.style.display ="none";
         console.log(cont.style.display);
 
     }
@@ -55,5 +63,9 @@ function formSubmit(event) {
     form.submit();
 }
 
-//http.request()
+function alertTime(){
+    console.log(zhe);
+ var mask = document.getElementById("mask");
+ mask.style.display = 'block';
+}
 

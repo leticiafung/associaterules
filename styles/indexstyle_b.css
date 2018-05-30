@@ -1,0 +1,134 @@
+@import "pub_B.css";
+/*header{*/
+    /*background-color: rgba(46,59,76,1);*/
+    /*padding-top: 1%;*/
+    /*padding-bottom:2%;*/
+    /*color:rgba(195,219,255,1);*/
+    /*font-size: 3rem;*/
+    /*font-family: 方正姚体;*/
+/*}*/
+/*nav{*/
+    /*background-color: rgba(245,246,246,1);*/
+    /*margin-left: -15px;*/
+    /*margin-right: -15px;*/
+    /*!*padding-right: 0;*!*/
+  /*!*padding-bottom: 25em;*!*/
+    /*!*height :0;*!*/
+    /*!*padding-bottom: 100%;*!*/
+    /*!*z-index: 2;*!*/
+
+/*}*/
+/*nav > div{*/
+    /*height: 40em;*/
+    /*background-color:  rgba(46,59,76,1);*/
+
+/*}*/
+/*body{*/
+    /*background-color: rgba(245,246,246,1);*/
+    /*margin-bottom: 0;*/
+    /*height:100%*/
+/*}*/
+/*!*.main > .row{*!*/
+    /*!*margin-left: -15px;*!*/
+    /*!*margin-right: -15px;*!*/
+/*!*}*!*/
+/*.row{*/
+    /*background-color: rgba(245,246,246,1);*/
+/*}*/
+/*.nav > li{*/
+
+    /*text-align: center;*/
+    /*font-size: 1.5rem;*/
+    /*font-family: 宋体, serif;*/
+    /*margin-bottom: 30%;*/
+/*}*/
+
+/*.navbar-inverse{*/
+    /*background-color: rgba(46,59,76,1);*/
+/*}*/
+/*.nav > li > a{*/
+    /*height: 5rem;*/
+    /*padding-top: 1em;*/
+
+/*}*/
+
+/*.content{*/
+    /*background-color: rgba(245,246,246,1);*/
+    /*margin-right: -15px;*/
+/*}*/
+/*.formlist{*/
+    /*background-color: white;*/
+/*}*/
+/*.head_title{*/
+    /*!*font-family: 华文仿宋;*!*/
+    /*font-size: 15px;*/
+    /*color: rgba(135,135,135,1);*/
+    /*padding-left:0;*/
+    /*margin-top: 3%;*/
+/*}*/
+
+/*#functionbox{*/
+    /*color: rgba(135,135,135,1);*/
+/*}*/
+/*.input_title{*/
+    /*padding-top: 3%;*/
+    /*padding-bottom: 1%;*/
+
+/*}*/
+nav > div{
+height: 50em;
+background-color:  rgba(46,59,76,1);
+
+}
+#row42{
+    display: none;
+}
+#requiredRow,#row42{
+    font-size: 10px;
+}
+.control-label{
+    /*width:11em;*/
+    margin-right: -15px;
+}
+.filepath{
+    width: 10em;
+}
+
+.form-group> .col-md-3{
+    margin-right: 15px;
+}
+.form-group> .col-md-1{
+    margin-left: 15px;
+}
+
+#row42 > p{
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: rgba(55,55,55,1);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#mask{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.6);
+    color:  rgba(46,59,76,1);
+    text-align: center;
+    display: none;
+}
+#mask > img{
+    position: absolute;
+    left:40%;
+    top:30%
+}
+#mask > p{
+    position: absolute;
+    left:40%;
+    top:calc(30% +  230px);
+    width: 200px;
+    /*background-color: rebeccapurple;*/
+}

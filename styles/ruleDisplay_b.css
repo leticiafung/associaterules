@@ -1,0 +1,7 @@
+@import "pub_B.css";
+/*add the length of navbar*/
+nav > div{
+    height: 85em;
+    background-color:  rgba(46,59,76,1);
+
+}

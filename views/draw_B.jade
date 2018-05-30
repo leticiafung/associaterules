@@ -1,0 +1,45 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset='utf-8')
+        title 关联规则挖掘
+        link(href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet")
+        link(href="../styles/drawStyle_b.css", rel="stylesheet")
+    body
+        header.container-fluid
+            p.col-md-12 关联规则挖掘
+        div.container-fluid
+            div.row
+                nav.col-md-2.col-lg-2.col-sm-2
+                    ul.nav.nav-pills.nav-stacked.navbar-inverse
+                        li
+                            a 首页
+                        li
+                            a 关联规则
+                        li.active
+                            a(href="#") 根因图分析
+                    div
+                div.col-md-10.content.col-lg-10.col-sm-10
+                    //no class"content"
+                    div.row
+                        p.col-md-10.col-md-offset-1.head_title.col-lg-10.col-sm-10  关联规则挖掘 > 关联规则
+                        div.col-md-10.col-md-offset-1.formlist.col-lg-10.col-sm-10
+                            #functionbox
+                                .input_title
+                                    h5.col-md-1.col-lg-1.co-sm-1 根因图
+                                    #ruleDisplay.btn-group.col-md-6.col-lg-6.col-sm-6
+                                        -var graphNum = graphs.length
+                                        -var i = 1
+                                        -var btnText = '根因图'
+                                        while i <= graphNum
+                                            button.btn.btn-primary(type="button") #{btnText+i}
+                                            - i++
+                                        //-var items = [{a:"跟高金，want代课教师方式来，是的罚款"},{b:"跟高金，want代课教师方式来，是的罚款"}]
+                                    hr.col-md-11.col-lg-11.col-sm-11
+                                #svgplace
+                                each graph in graphs
+                                    p.hiddenv #{JSON.stringify(graph.edges)}
+                                //使用后台传的数据
+                                script(src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js", type="text/javascript")
+                                script(src="http://d3js.org/d3.v3.min.js", type="text/javascript")
+                                script(src="../scripts/drawPage_b.js", type="text/javascript")

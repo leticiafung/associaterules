@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>关联规则挖掘</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/indexstyle.css" rel="stylesheet"/>
+
+</head>
+<body>
+<header class="site_header">
+    <h1>关联规则挖掘</h1>
+</header>
+<!--<nav>-->
+    <!--<ul id="list1">-->
+        <!--<li> <a href="index.html">主页</a> </li>-->
+        <!--&lt;!&ndash; <li> <a href="drawpic.html">算法运行</a> </li> &ndash;&gt;-->
+    <!--</ul>-->
+<!--</nav>-->
+<div id="functionbox">
+    <div class="input_title">
+        <p>参数输入</p>
+    </div>
+    <form action="/answer" method="post" id="upload" role="form" class="form-horizontal">
+        <div id="requiredRow">
+            <div class="form-group">
+                <label for="doc1" class="control-label col-lg-2">告警数据文件</label>
+                <div class="col-lg-3">
+                <input type="text" class="form-control" placeholder="D://" id="doc1"  required autofocus name="src_path"/>
+                </div>
+                <label for="doc2" class="control-label col-lg-2">文件输出路径</label>
+                <div class="col-lg-3">
+                <input type="text" class="form-control" placeholder="文件输出路径" id="doc2" name="res_path" required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="d3">临时数据表</label>
+                <div class="col-lg-3">
+                    <input id="d3" style="text" name="table_name" class="form-control" value="alarm_data" />
+                </div>
+                <label class="control-label col-lg-2">告警文件日期格式</label>
+                 <div class="col-lg-3">
+                    <input type="text" placeholder="MM/dd/yyy" name="file_data_fmt" class="form-control" required/>
+                 </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" >数据表日期格式</label>
+                <div class="col-lg-3">
+                    <input type="text" placeholder="日期格式"  name="table_data_fmt" value="yyyy-MM-dd HH:mm:ss" class="form-control"  />
+                </div>
+                <label class="control-label col-lg-2">告警源字段</label>
+                <div class="col-lg-3">
+                    <input type="text" placeholder="告警源" name="alarm_src_file" class="form-control" required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2">告警ID字段 </label>
+                <div class="col-lg-3">
+                    <input type="text" placeholder="告警ID" name="alarm_id_file" class="form-control"required/>
+                </div>
+                <label  class="control-label col-lg-2">告警名称字段 </label>
+                <div class="col-lg-3">
+                    <input type="text" placeholder="名称" name="alarm_name_file" class="form-control" required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2">发生时间(NT)字段 </label>
+                <div class="col-lg-3">
+                    <input type="text" placeholder="发生时间" name="alarm_raised_time_file" class="form-control"required/>
+                </div>
+                <label class="control-label col-lg-2">清除时间(NT)字段</label>
+                <div class="col-lg-3">
+                    <input type="text" placeholder="发生时间" name="alarm_cleared_time_file" class="form-control"required/>
+                </div>
+            </div>
+            <!-- <input type="hidden" name="filepath" value=""> -->
+        </div>
+
+
+        <div id="row4">
+            <div id="row41">
+                <p> <img  id ="ficon" src="images/unshow.png" alt="unshow" />  高级选项  </p>
+            </div>
+            <div id="row42">
+               
+                <br />
+               
+                <br />
+                <label>数据表告警源字段名<input type="text" placeholder="告警源字段名" name="alarm_src_table" value="alarm_src"/></label>
+                <label>数据表告警ID字段名<input type="text" placeholder="告警源ID字段名" name="alarm_id_table" value= "AlarmId"/></label>
+                <label>数据表告警名称字段名<input type="text" placeholder="告警名称字段名" name="alarm_name_table" value= "AlarmName"/></label>
+                <label>数据表告警发生时间字段名<input type="text" placeholder="告警发生时间字段名" name= "alarm_raised_time_table" value="AlarmRaisedTime"/></label>
+                <label>数据表告警清除时间字段名<input type="text" placeholder="告警清除字段名" name= "alarm_cleared_time_table" value="AlarmClearedTime"/></label>
+
+                <label>数据表src建立相关<input type="text" placeholder="src相关" name= "alarm_src_sql_type" value="VARCHAR(30)"/ ></label>
+                <label>数据表id建立相关<input type="text" placeholder="id相关" name= "alarm_id_sql_type" value="VARCHAR(30)" /></label>
+                <label>数据表name建立相关<input type="text" placeholder="name相关" name= "alarm_name_sql_type", value="VARCHAR(100)"/></label>
+                <label>数据表发生时间建立相关<input type="text" placeholder="数据表发生时间建立相关" name="alarm_raised_time_sql_type" value="DATETIME" /></label>
+                <label>数据表清除时间建立相关<input type="text" placeholder="数据表清除时间建立相关" name="alarm_cleared_time_sql_type"  value="DATETIME" /></label>
+
+                <label>每次读取告警数<input type="number" placeholder="每次读取告警数" name= "block_size" value= 10000 /></label>
+                <label>是否去除闪断告警<input type="text" placeholder="true" name="flash_on" value=true /></label>
+                <label>闪断告警时长定义<input type="number" placeholder="10" name= "flash_threshold" value= 10 /></label>
+                <label>闪断告警合并时长门限<input type="number" placeholder="30" name=  "merge_time_threshold" value=30 /></label>
+                <label>闪断告警合并条数门限<input type="number" placeholder="3" name="merge_count_threshold"  value=3 /></label>
+
+                <label>支持度门限<input type="number" placeholder="10" name="corr_support" value=10 /></label>
+                <label>置信度门限<input type="text" placeholder="0.3" name="corr_threshold" value=0.8 /></label>
+
+                <label>时间窗长度<input type="number" placeholder="60" name="win_width"  value=60 /></label>
+                <label>时间窗滑动步长<input type="text" placeholder="20" name="move_len" value=20 /></label>
+                <label>支持度门限<input type="number" placeholder="10" name="asso_support"  value=10 /></label>
+                <label>置信度门限<input type="text" placeholder="0.8" name="conf" value=0.8 /></label>
+                <label>挖掘规则长度<input type="number" placeholder="2" name="k"   value=2 /></label>
+<!-- <有两个support，需要改变！！！correlation中改成corr> -->
+                <label>算法结果是交或并<select name="and_or"></label>
+                    <option value="true" >算法取交</option>   
+                    <option value="false" selected>算法取并</option>     
+                </select>   
+             </div>
+
+             
+        </div>
+        <button type="submit"  class="btn btn-primary" id="subbtn">确定</button>
+    </form>
+</div>
+<!-- <form action="/answer" method="post" enctype="multipart/form-data">
+    <input type="file" name="myf1"/>
+    <input type="text" name="tx1" value="500" />
+    <input type="submit" name="subm" value="sub1" />
+</form> -->
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="scripts/main.js" type="text/javascript"></script>
+</body>
+</html>

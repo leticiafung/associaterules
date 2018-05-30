@@ -1,0 +1,9 @@
+@import "pub_B.css";
+.hiddenv {
+    display: none;
+}
+nav > div{
+    height: 800px;
+    background-color:  rgba(46,59,76,1);
+
+}
