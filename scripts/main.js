@@ -10,6 +10,13 @@ window.onload = function() {
         // console.log(zhe);
         var mask = document.getElementById("mask");
         mask.style.display = 'block';
+
+    // $('a:eq(1)').click(()=>{
+    //     window.history.go(1);
+    // });
+    // $('a:eq(2)').click(()=>{
+    //     window.history.go(2);
+    // });
     };
 
    // highlightP();
@@ -64,7 +71,6 @@ function formSubmit(event) {
 }
 
 function alertTime(){
-    console.log(zhe);
  var mask = document.getElementById("mask");
  mask.style.display = 'block';
 }

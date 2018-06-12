@@ -20,7 +20,9 @@
 // };
 //let links = JSON.parse(document.getElementsByClassName('hiddenv')[0].innerText);
 let links = [],
-    nodes = {};
+    nodes = {},
+    typearr = [],
+    circlecolor = [];
 
  $( window ).on('load',()=>{
      let k = -3;
@@ -40,13 +42,13 @@ let links = [],
      $('a:eq(0)').click(()=>{
          window.history.go(-2);
      });
-     $('a.eq(1)').click(()=>{
+     $('a:eq(1)').click(()=>{
          window.history.go(-1);
      });
 });
 
     // var links =  [{"src_id":"25888","src_name":"SCTP链路故障告警","des_id":"29201",
-    //    "des_name":"S1接口故障告警","count":"220","weight":"0.9482758620689655"}];
+    //    "des_name":"S1接口故障告警","count":"220","weight":"0.9482758620689655"，"xType":"sss","yType":"yyy"}];
     //var links = JSON.parse(document.getElementsById('hiddenv').innerText);
 function getLinks(k) {
     if(k !== -1) {
@@ -59,10 +61,12 @@ function draw() {
     links.forEach(function (link) {
         // link.source = nodes[link.src_name] || (nodes[link.src_name] = {name: link.src_name});
         // link.target = nodes[link.des_name] || (nodes[link.des_name] = {name: link.des_name});
-        link.source = nodes[link.xName] || (nodes[link.xName] = {name: link.xName});
-        link.target = nodes[link.yName] || (nodes[link.yName] = {name: link.yName});
-
+        link.source = nodes[link.xName] || (nodes[link.xName] = {name: link.xName,type: link.xType});
+        link.target = nodes[link.yName] || (nodes[link.yName] = {name: link.yName,type: link.yType});
+        //added
+        
     });
+
 }
 //draw();
 function drawForce() {
@@ -168,8 +172,17 @@ function drawForce() {
         .style("fill", function (node) {
             var color;//圆圈背景色
             var link = links[node.index];
-            color = "#F9EBF9";
+            //add
+            var typeinde = typearr.indexOf(node.type) ;
+            if(typeinde!== -1)
+            	color = circlecolor[typeinde];
+            else {
+            	typearr.push(node.type);
+            	color = '#'+Math.floor(Math.random()*0xffffff).toString(16);
+            	circlecolor.push(color);
+            		}
             return color;
+            
         })
         .style('stroke', function (node) {
             var color;//圆圈线条的颜色
@@ -206,11 +219,9 @@ function drawForce() {
         .style('fill', function (node) {
             var color;//文字颜色
             var link = links[node.index];
-            // if(node.name==link.source.name && link.rela=="主营产品"){
-            //     color="#B43232";
-            // }else{
-            color = "#A254A2";
-            //}
+          
+            //color = "#A254A2";
+           color = "#000000"
             return color;
         }).attr('x', function (d) {
             // console.log(d.name+"---"+ d.name.length);

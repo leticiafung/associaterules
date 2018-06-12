@@ -11,8 +11,8 @@ var app = express();
 app.set('views',__dirname +'/views');
 app.set('view engine','jade');
 app.use(express.static(__dirname));
-http.createServer(app).listen(8888,'127.0.0.1');
-console.log('服务器在8888上运行');
+http.createServer(app).listen(8899,'127.0.0.1');
+console.log('服务器在8899上运行');
 
 //响应表单提交
 app.route('/answer')
@@ -28,6 +28,7 @@ app.route('/answer')
   })//receive data
  
   req.on('end',()=>{
+
     var content = Buffer.concat(chunks,size).toString();
     req.body = querystring.parse(content);//like {xx:aa;cc:b}
     //写算法需要的json，reqbody不用重新转换格式了,button没有上传。
@@ -43,6 +44,7 @@ app.route('/answer')
   	readAndwrite.renderDrawPage(res);
   });
 
+//响应下载
 app.route('/loadRule')
     .get((req,res)=>{
         console.log("下载文件");
@@ -68,7 +70,31 @@ app.route('/loadRule')
         //   res.end();
         // })
 
-        res.download('./java/jarprj/new_fp1_0.xls','new_fp1_0.xls');
+        res.download('./java/output/rules.xls','rules.xls');
+
+    });
+
+app.route('/readData')
+    .post((req,res)=>{
+        console.log('返回');
+        let chunks = [];
+        let size = 0 ;
+        req.on('data',(chunk) => {
+
+            chunks.push(chunk);
+            size += chunk.length;
+            //console.log(data.toString());
+        });
+        req.on('end',()=>{
+
+            let content = Buffer.concat(chunks,size).toString();
+            req.body = querystring.parse(content);//like {xx:aa;cc:b}
+            //写算法需要的json，reqbody不用重新转换格式了,button没有上传。
+            //req.body = readAndwrite.transferAsparameter(req.body);
+            //  console.log('after:'+ JSON.stringify(req.body));
+            readAndwrite.readData(req.body,res);
+        });
+        //console.log(req.body);
 
     });
 

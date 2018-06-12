@@ -50,16 +50,16 @@ function writeFile(filename, reqbody) {
 
 function calculateData(reqbody,resp) {
   //返回给客户端以buffer形式,关联规则分析页的返回,路径"D:\study\codepractice\dailyPra\associaterule\java\jar工程\parameters.json"
-  let promise1 = writeFile(__dirname + '/java/jarprj/parameters.json',reqbody);
+  let promise1 = writeFile(__dirname + '/java/parameters.json',reqbody);
   promise1.then(()=>{
   	console.log('writesuccessful');
   	//"D:\study\codepractice\dailyPra\associaterule\java\jar工程\alarm_correlation_minning.jar"
-  	let promise = childExec("java -jar ./java/jarprj/alarm_correlation_minning.jar"); 
+  	let promise = childExec(".\\java\\run.bat");
   	return promise;
   },(writeerr)=>{ console.log('!write error');
      return;
   }).then(()=> {	  
-  	let promise2 = readFile(__dirname+'/java/jarprj/output/new_-all.json');
+  	let promise2 = readFile(__dirname+'/java/output/all.json');
   	console.log('execsuccessful');
   	return promise2;
   },(processerror) => { console.log('!porcesserror:'+ processerror);
@@ -75,7 +75,7 @@ function calculateData(reqbody,resp) {
 //渲染关联规则页,发送响应,内部函数
 function parseRenderdata(data,resp) {
 	resp.writeHead(200,{'Content-Type':'text/html'});
-	resp.render('ruleDisplay.jade', JSON.parse(data),(err,html)=>{
+	resp.render('ruleDisplay_B.jade', JSON.parse(data),(err,html)=>{
 		if(err) {
 			console.log('渲染出错');
 			throw err;
@@ -115,16 +115,16 @@ function transferAsparameter(reqbody) {
 		count++;
 	}
 	return temp ;
-	console.log('reqpath:' + JSON.stringify(temp));
+	//console.log('reqpath:' + JSON.stringify(temp));
 
 }
 
 //handle the draw page 
 function renderDrawPage(res) {
-	let promise = readFile(__dirname+'/java/jarprj/output/new_-all.json');
+	let promise = readFile(__dirname+'/java/output/all.json');
 	promise.then((data) => {
 		res.writeHead(200,{'Content-Type':'text/html'});
-		res.render('draw.jade', JSON.parse(data),(err,html)=>{
+		res.render('draw_B.jade', JSON.parse(data),(err,html)=>{
 		if(err) {
 			console.log('渲染出错');
 			throw err;
@@ -139,11 +139,30 @@ function renderDrawPage(res) {
 	});
 }
 
-
-
-
-
+//read uploaded alarming_data
+function readData(reqbody,resp) {
+    //返回给客户端以buffer形式,关联规则分析页的返回,路径"D:\study\codepractice\dailyPra\associaterule\java\jar工程\parameters.json"
+    let promise1 = writeFile(__dirname + '/java/parameters.json', reqbody);
+    promise1.then(() => {
+        console.log('writesuccessful');
+        //"D:\study\codepractice\dailyPra\associaterule\java\jar工程\alarm_correlation_minning.jar"
+        let promise = childExec(".\\java\\dataRead.bat");
+        return promise;
+    }, (writeerr) => {
+        console.log('!write error');
+        return;
+    }).then(() => {
+        console.log('execsuccessful');
+        resp.writeHead(200,{'Content-Type':'text/plain'});
+		resp.end("execsuccessful");
+        return;
+    }, (processerror) => {
+        console.log('!porcesserror:' + processerror);
+        return;
+    });
+}
 
 module.exports.calculateData = calculateData;
 module.exports.transferAsparameter = transferAsparameter;
 module.exports.renderDrawPage = renderDrawPage;
+module.exports.readData = readData;

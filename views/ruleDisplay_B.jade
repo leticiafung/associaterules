@@ -28,7 +28,7 @@ html(lang="en")
                                .input_title
                                     h5 规则表格
                                     hr
-                                - var head = ["xId","xName","xSupport","yId","yName","ySupport","xySupport","confidence"]
+                                - var head = ["xId","xName","xType","xSupport","yId","yName","yType","ySupport","xySupport","confidence","addition"]
                                 - var a_rule = []
                                 - var count = 0
                                 mixin display(item)
@@ -44,22 +44,28 @@ html(lang="en")
                                         each rule in rules
                                             - each val ,key in rule
                                                 - if(count == 0)
-                                                    - a_rule[0] = val
+                                                    - a_rule[2] = val
                                                 - else if(count == 1)
-                                                    - a_rule[6] = val
+                                                    - a_rule[0] = val
                                                 - else if(count == 2)
-                                                    - a_rule[3] = val
+                                                    - a_rule[6] = val
                                                 - else if(count == 3)
-                                                    - a_rule[7] = val
+                                                    - a_rule[8] = val
                                                 - else if(count == 4)
                                                     - a_rule[4] = val
                                                 - else if(count == 5)
-                                                    - a_rule[1] = val
+                                                    - a_rule[9] = val
                                                 - else if(count == 6)
-                                                    - a_rule[2] = val
-                                                - else
                                                     - a_rule[5] = val
-                                                - count = count +1
+                                                - else if(count == 7)
+                                                    - a_rule[1] = val
+                                                - else if(count == 8)
+                                                    - a_rule[3] = val
+                                                - else if(count == 9)
+                                                    - a_rule[7] = val
+                                                - else
+                                                    - a_rule[10] = val
+                                                - count = count + 1
                                             - count = 0
                                             +display(a_rule)
                                  div
